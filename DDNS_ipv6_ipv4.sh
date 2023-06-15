@@ -53,9 +53,9 @@ fi
 
 if [ "$dnsIp6" != "$currentIp6" ];
  then
-	 echo "$(date --rfc-3339=seconds) - Ip6 are not equal" >> $log
+#	 echo "$(date --rfc-3339=seconds) - Ip6 are not equal" >> $log
 	request='[{"data":"'$currentIp6'","ttl":3600}]'
-	 echo "$(date --rfc-3339=seconds) - request:" $request >> $log
+#	 echo "$(date --rfc-3339=seconds) - request:" $request >> $log
 	nresult=$(curl -i -s -X PUT \
  -H "$headers" \
  -H "Content-Type: application/json" \
